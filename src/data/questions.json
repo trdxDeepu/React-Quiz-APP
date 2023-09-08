@@ -1,0 +1,258 @@
+{
+  "questions": [
+    {
+      "question": "Which is the most popular JavaScript framework?",
+      "options": ["Angular", "React", "Svelte", "Vue"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which company invented React?",
+      "options": ["Google", "Apple", "Netflix", "Facebook"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "What's the fundamental building block of React apps?",
+      "options": ["Components", "Blocks", "Elements", "Effects"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What's the name of the syntax we use to describe the UI in React components?",
+      "options": ["FBJ", "Babel", "JSX", "ES2015"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "How does data flow naturally in React apps?",
+      "options": [
+        "From parents to children",
+        "From children to parents",
+        "Both ways",
+        "The developers decides"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "How to pass data into a child component?",
+      "options": ["State", "Props", "PropTypes", "Parameters"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "When to use derived state?",
+      "options": [
+        "Whenever the state should not trigger a re-render",
+        "Whenever the state can be synchronized with an effect",
+        "Whenever the state should be accessible to all components",
+        "Whenever the state can be computed from another state variable"
+      ],
+      "correctOption": 3,
+      "points": 30
+    },
+    {
+      "question": "What triggers a UI re-render in React?",
+      "options": [
+        "Running an effect",
+        "Passing props",
+        "Updating state",
+        "Adding event listeners to DOM elements"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "When do we directly \"touch\" the DOM in React?",
+      "options": [
+        "When we need to listen to an event",
+        "When we need to change the UI",
+        "When we need to add styles",
+        "Almost never"
+      ],
+      "correctOption": 3,
+      "points": 20
+    },
+    {
+      "question": "In what situation do we use a callback to update state?",
+      "options": [
+        "When updating the state will be slow",
+        "When the updated state is very data-intensive",
+        "When the state update should happen faster",
+        "When the new state depends on the previous state"
+      ],
+      "correctOption": 3,
+      "points": 30
+    },
+    {
+      "question": "If we pass a function to useState, when will that function be called?",
+      "options": [
+        "On each re-render",
+        "Each time we update the state",
+        "Only on the initial render",
+        "The first time we update the state"
+      ],
+      "correctOption": 2,
+      "points": 30
+    },
+    {
+      "question": "Which hook to use for an API request on the component's initial render?",
+      "options": ["useState", "useEffect", "useRef", "useReducer"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which variables should go into the useEffect dependency array?",
+      "options": [
+        "Usually none",
+        "All our state variables",
+        "All state and props referenced in the effect",
+        "All variables needed for clean up"
+      ],
+      "correctOption": 2,
+      "points": 30
+    },
+    {
+      "question": "An effect will always run on the initial render.",
+      "options": [
+        "True",
+        "It depends on the dependency array",
+        "False",
+        "In depends on the code in the effect"
+      ],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "When will an effect run if it doesn't have a dependency array?",
+      "options": [
+        "Only when the component mounts",
+        "Only when the component unmounts",
+        "The first time the component re-renders",
+        "Each time the component is re-rendered"
+      ],
+      "correctOption": 3,
+      "points": 20
+    },
+    {
+      "question": "What is the purpose of the React Router library?",
+      "options": [
+      "To manage server-side routing in React applications",
+      "To create and manage dynamic forms in React",
+      "To handle HTTP requests in React components",
+      "To enable client-side routing in React applications"
+      ],
+      "correctOption": 3,
+      "points": 20
+      },
+      
+      {
+      "question": "What is Redux used for in a React application?",
+      "options": [
+      "To manage component state within a single component",
+      "To handle asynchronous operations like API requests",
+      "To manage and centralize the application's state",
+      "To create reusable UI components"
+      ],
+      "correctOption": 2,
+      "points": 20
+      },
+      
+      {
+      "question": "What is the purpose of the 'key' prop in React lists?",
+      "options": [
+      "To define the order of items in the list",
+      "To specify the CSS styling for list items",
+      "To uniquely identify each item in the list",
+      "To group items into sublists"
+      ],
+      "correctOption": 2,
+      "points": 20
+      },
+      
+      {
+      "question": "Which lifecycle method is used for side effects in functional components?",
+      "options": [
+      "componentDidMount",
+      "componentWillUnmount",
+      "useEffect",
+      "componentDidUpdate"
+      ],
+      "correctOption": 2,
+      "points": 20
+      },
+      
+      {
+      "question": "What is React Native primarily used for?",
+      "options": [
+      "Building web applications",
+      "Creating native mobile applications for iOS and Android",
+      "Designing user interfaces for desktop applications",
+      "Building server-side applications"
+      ],
+      "correctOption": 1,
+      "points": 20
+      },
+      
+      {
+      "question": "What is JSX in React?",
+      "options": [
+      "A JavaScript library for handling XML data",
+      "A JavaScript extension for writing HTML-like code in JavaScript",
+      "A state management library in React",
+      "A tool for optimizing React components"
+      ],
+      "correctOption": 1,
+      "points": 20
+      },
+      
+      {
+      "question": "What is the purpose of React's 'shouldComponentUpdate' method?",
+      "options": [
+      "To determine if a component should render based on its state and props",
+      "To update the component's state during rendering",
+      "To force a component to re-render immediately",
+      "To handle errors during rendering"
+      ],
+      "correctOption": 0,
+      "points": 20
+      },
+      
+      {
+      "question": "In React, what is the role of the 'Virtual DOM'?",
+      "options": [
+      "It's a debugging tool for inspecting component hierarchies",
+      "It's a virtual representation of the actual DOM used for efficient updates",
+      "It's a special type of DOM element used for rendering 3D graphics",
+      "It's a container for storing global state in a React application"
+      ],
+      "correctOption": 1,
+      "points": 20
+      },
+      
+      {
+      "question": "What does the 'props.children' property represent in a React component?",
+      "options": [
+      "It represents the parent component's state",
+      "It represents the component's internal data",
+      "It represents any child components passed to the parent component",
+      "It represents the component's methods and functions"
+      ],
+      "correctOption": 2,
+      "points": 20
+      },
+      
+      {
+      "question": "What is the purpose of the 'componentDidUpdate' lifecycle method in React?",
+      "options": [
+      "To initialize component state",
+      "To render the component for the first time",
+      "To perform actions after the component updates due to changes in props or state",
+      "To handle component unmounting"
+      ],
+      "correctOption": 2,
+      "points": 20
+      }
+  ]
+}
