@@ -9,6 +9,7 @@ import Error from "./components/Error";
 import StartScreen from "./components/StartScreen";
 import Question from "./Questions/Question";
 import NextButton from "./Questions/NextButton";
+import Progress from "./components/Progress";
 
 const initialState = {
   questions: [],
@@ -47,15 +48,15 @@ function reducer(state, action) {
         answer: action.payload,
         points:
           action.payload === question.correctOption
-            ? state.point + question.points
-            : state.point,
+            ? state.points + question.points
+            : state.points,
       };
 
     case "nextQuestion":
       return {
         ...state,
         index: state.index + 1,
-        answer:null
+        answer: null,
       };
 
     default:
@@ -64,12 +65,16 @@ function reducer(state, action) {
 }
 
 function App() {
-  const [{ questions, status, index, answer }, dispatch] = useReducer(
+  const [{ questions, status, index, answer, points }, dispatch] = useReducer(
     reducer,
     initialState
   );
 
   const numQuestions = questions.length;
+  const maxPossiblePoint = questions.reduce(
+    (prev, curr) => prev + curr.points,
+    0
+  );
 
   useEffect(() => {
     fetch("http://localhost:9000/questions")
@@ -93,15 +98,20 @@ function App() {
         )}
         {status === "active" && (
           <>
-          <Question
-            questions={questions[index]}
-            dispatch={dispatch}
-            answer={answer}
-            status={status}
-            
+            <Progress
+              numQuestions={numQuestions}
+              index={index}
+              points={points}
+              maxPossiblePoint={maxPossiblePoint}
+              answer={answer}
             />
-          <NextButton dispatch={dispatch}
-          answer={answer}/>
+            <Question
+              questions={questions[index]}
+              dispatch={dispatch}
+              answer={answer}
+              status={status}
+            />
+            <NextButton dispatch={dispatch} answer={answer} />
           </>
         )}
       </MainItem>
