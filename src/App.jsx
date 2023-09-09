@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import { useEffect, useReducer } from "react";
 import Header from "./components/Header";
@@ -5,13 +6,14 @@ import MainItem from "./components/MainItem";
 import Loader from "./components/Loader";
 import Error from "./components/Error";
 import StartScreen from "./components/StartScreen";
-import Question from "./components/Question";
+import Question from "./Questions/Question";
 
 const initialState = {
   questions: [],
   //We can be in loading state and 'error' state and "active state " and can be in "finished state"
   status: "loading",
   index: 0,
+  answer: null,
 };
 
 function reducer(state, action) {
@@ -28,18 +30,26 @@ function reducer(state, action) {
         ...state,
         status: "error",
       };
-    case "start":
+
+    case "startQuestion":
       return {
         ...state,
         status: "active",
       };
+
+    case "newAnswer":
+      return {
+        ...state,
+        answer: action.payload,
+      };
+
     default:
       throw new Error("Action unknown");
   }
 }
 
 function App() {
-  const [{ questions, status, index }, dispatch] = useReducer(
+  const [{ questions, status, index, answer }, dispatch] = useReducer(
     reducer,
     initialState
   );
@@ -51,7 +61,7 @@ function App() {
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch((err) => dispatch({ type: "dataFailed" }));
-  });
+  }, []);
 
   return (
     <div className="app">
@@ -60,9 +70,20 @@ function App() {
         {status === "loading" && <Loader />}
         {status === "error" && <Error />}
         {status === "ready" && (
-          <StartScreen numQuestions={numQuestions} dispatch={dispatch} />
+          <StartScreen
+            numQuestions={numQuestions}
+            dispatch={dispatch}
+            status={status}
+          />
         )}
-        {status === "active" && <Question questions={questions[index]} />}
+        {status === "active" && (
+          <Question
+            questions={questions[index]}
+            dispatch={dispatch}
+            answer={answer}
+            status={status}
+          />
+        )}
       </MainItem>
     </div>
   );

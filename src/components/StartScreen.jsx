@@ -1,16 +1,17 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 
-const StartScreen = ({ numQuestions, dispatch }) => {
+const StartScreen = ({ numQuestions, dispatch,status }) => {
+    console.log("the status for start scree",status)
   return (
     <div className="start">
       <h2>Welcome to React Quiz</h2>
-      <p>{numQuestions} questions to test your React Mastery</p>
+      <h3>{numQuestions} questions to test your React Mastery</h3>
       <button
         className="btn btn-ui"
         onClick={() => {
           console.log("working");
-          dispatch({ type: "start" });
+          dispatch({ type: "startQuestion" });
         }}
       >
         Let's Start
