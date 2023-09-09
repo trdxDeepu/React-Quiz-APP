@@ -138,121 +138,121 @@
     {
       "question": "What is the purpose of the React Router library?",
       "options": [
-      "To manage server-side routing in React applications",
-      "To create and manage dynamic forms in React",
-      "To handle HTTP requests in React components",
-      "To enable client-side routing in React applications"
+        "To manage server-side routing in React applications",
+        "To create and manage dynamic forms in React",
+        "To handle HTTP requests in React components",
+        "To enable client-side routing in React applications"
       ],
       "correctOption": 3,
       "points": 20
-      },
-      
-      {
+    },
+
+    {
       "question": "What is Redux used for in a React application?",
       "options": [
-      "To manage component state within a single component",
-      "To handle asynchronous operations like API requests",
-      "To manage and centralize the application's state",
-      "To create reusable UI components"
+        "To manage component state within a single component",
+        "To handle asynchronous operations like API requests",
+        "To manage and centralize the application's state",
+        "To create reusable UI components"
       ],
       "correctOption": 2,
       "points": 20
-      },
-      
-      {
+    },
+
+    {
       "question": "What is the purpose of the 'key' prop in React lists?",
       "options": [
-      "To define the order of items in the list",
-      "To specify the CSS styling for list items",
-      "To uniquely identify each item in the list",
-      "To group items into sublists"
+        "To define the order of items in the list",
+        "To specify the CSS styling for list items",
+        "To uniquely identify each item in the list",
+        "To group items into sublists"
       ],
       "correctOption": 2,
       "points": 20
-      },
-      
-      {
+    },
+
+    {
       "question": "Which lifecycle method is used for side effects in functional components?",
       "options": [
-      "componentDidMount",
-      "componentWillUnmount",
-      "useEffect",
-      "componentDidUpdate"
+        "componentDidMount",
+        "componentWillUnmount",
+        "useEffect",
+        "componentDidUpdate"
       ],
       "correctOption": 2,
       "points": 20
-      },
-      
-      {
+    },
+
+    {
       "question": "What is React Native primarily used for?",
       "options": [
-      "Building web applications",
-      "Creating native mobile applications for iOS and Android",
-      "Designing user interfaces for desktop applications",
-      "Building server-side applications"
+        "Building web applications",
+        "Creating native mobile applications for iOS and Android",
+        "Designing user interfaces for desktop applications",
+        "Building server-side applications"
       ],
       "correctOption": 1,
       "points": 20
-      },
-      
-      {
+    },
+
+    {
       "question": "What is JSX in React?",
       "options": [
-      "A JavaScript library for handling XML data",
-      "A JavaScript extension for writing HTML-like code in JavaScript",
-      "A state management library in React",
-      "A tool for optimizing React components"
+        "A JavaScript library for handling XML data",
+        "A JavaScript extension for writing HTML-like code in JavaScript",
+        "A state management library in React",
+        "A tool for optimizing React components"
       ],
       "correctOption": 1,
       "points": 20
-      },
-      
-      {
+    },
+
+    {
       "question": "What is the purpose of React's 'shouldComponentUpdate' method?",
       "options": [
-      "To determine if a component should render based on its state and props",
-      "To update the component's state during rendering",
-      "To force a component to re-render immediately",
-      "To handle errors during rendering"
+        "To determine if a component should render based on its state and props",
+        "To update the component's state during rendering",
+        "To force a component to re-render immediately",
+        "To handle errors during rendering"
       ],
       "correctOption": 0,
       "points": 20
-      },
-      
-      {
+    },
+
+    {
       "question": "In React, what is the role of the 'Virtual DOM'?",
       "options": [
-      "It's a debugging tool for inspecting component hierarchies",
-      "It's a virtual representation of the actual DOM used for efficient updates",
-      "It's a special type of DOM element used for rendering 3D graphics",
-      "It's a container for storing global state in a React application"
+        "It's a debugging tool for inspecting component hierarchies",
+        "It's a virtual representation of the actual DOM used for efficient updates",
+        "It's a special type of DOM element used for rendering 3D graphics",
+        "It's a container for storing global state in a React application"
       ],
       "correctOption": 1,
       "points": 20
-      },
-      
-      {
+    },
+
+    {
       "question": "What does the 'props.children' property represent in a React component?",
       "options": [
-      "It represents the parent component's state",
-      "It represents the component's internal data",
-      "It represents any child components passed to the parent component",
-      "It represents the component's methods and functions"
+        "It represents the parent component's state",
+        "It represents the component's internal data",
+        "It represents any child components passed to the parent component",
+        "It represents the component's methods and functions"
       ],
       "correctOption": 2,
       "points": 20
-      },
-      
-      {
+    },
+
+    {
       "question": "What is the purpose of the 'componentDidUpdate' lifecycle method in React?",
       "options": [
-      "To initialize component state",
-      "To render the component for the first time",
-      "To perform actions after the component updates due to changes in props or state",
-      "To handle component unmounting"
+        "To initialize component state",
+        "To render the component for the first time",
+        "To perform actions after the component updates due to changes in props or state",
+        "To handle component unmounting"
       ],
       "correctOption": 2,
       "points": 20
-      }
+    }
   ]
 }
