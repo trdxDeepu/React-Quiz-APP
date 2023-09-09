@@ -14,6 +14,8 @@ import FinishedQuestion from "./Questions/FinishedQuestion";
 import Footer from "./components/Footer";
 import Timer from "./Questions/Timer";
 
+const SECS_PER_QUESTION = 30 
+
 const initialState = {
   questions: [],
   //We can be in loading state and 'error' state and "active state " and can be in "finished state"
@@ -22,7 +24,7 @@ const initialState = {
   answer: null,
   points: 0,
   highScore: 0,
-  secondsRemaning: 10,
+  secondsRemaning: null,
 };
 
 function reducer(state, action) {
@@ -44,6 +46,7 @@ function reducer(state, action) {
       return {
         ...state,
         status: "active",
+        secondsRemaning:state.questions.length * SECS_PER_QUESTION
       };
 
     case "newAnswer":
@@ -83,6 +86,7 @@ function reducer(state, action) {
       return {
         ...state,
         secondsRemaning: state.secondsRemaning - 1,
+        status: state.secondsRemaning === 0 ? "finished" : state.status,
       };
 
     default:
@@ -91,8 +95,10 @@ function reducer(state, action) {
 }
 
 function App() {
-  const [{ questions, status, index, answer, points, highScore,secondsRemaning }, dispatch] =
-    useReducer(reducer, initialState);
+  const [
+    { questions, status, index, answer, points, highScore, secondsRemaning },
+    dispatch,
+  ] = useReducer(reducer, initialState);
 
   const numQuestions = questions.length;
   const maxPossiblePoint = questions.reduce(
@@ -136,7 +142,7 @@ function App() {
               status={status}
             />
             <Footer>
-              <Timer dispatch={dispatch}  secondsRemaning={secondsRemaning}/>
+              <Timer dispatch={dispatch} secondsRemaning={secondsRemaning} />
 
               <NextButton
                 dispatch={dispatch}
