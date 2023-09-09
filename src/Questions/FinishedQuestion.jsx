@@ -20,7 +20,7 @@ const FinishedQuestion = ({ points, maxPossiblePoints, highScore,dispatch }) => 
         {Math.ceil(percentage)}%)
       </p>
       <p className="highscore">(Highscore: {highScore} points)</p>
-      <button className="btn btn-ui" onClick={dispatch({ type: "restart" })}>
+      <button className="btn btn-ui" onClick={()=>dispatch({type:"restart"})}>
         Restart Quiz
       </button>
     </>
