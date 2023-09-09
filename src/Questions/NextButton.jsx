@@ -1,0 +1,16 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+
+const NextButton = ({ dispatch, answer }) => {
+  if (answer === null) return null;
+  return (
+    <button
+      className="btn btn-ui"
+      onClick={() => dispatch({ type: "nextQuestion" })}
+    >
+        Next Question
+    </button>
+  );
+};
+
+export default NextButton;
